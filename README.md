@@ -16,6 +16,6 @@ Still to be determined, go to my [first blog post](http://www.roysivan.com/lets-
 Current Ideas
 --------------
 * __Curated user submitted article directory__ - for intermediate / advanced WP and OOP programming
-* __Social color swatch site___
+* __Social color swatch site__
 * __A new WP theme__ - A new version for [My AngularJS WordPress theme](https://github.com/royboy789/Angular-Wordpress-Theme)
 * __ToDoMVC Clone for WP__ - A single backend and multiple themes with different types of front end libraries
