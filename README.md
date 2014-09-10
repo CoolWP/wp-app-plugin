@@ -13,6 +13,10 @@ The App
 ========  
 Still to be determined, go to my [first blog post](http://www.roysivan.com/lets-build-wordpress-app-together-one/#.VA4tHvmwLYh) to give input on what you want to build, or let me know if you like one of my ideas.
   
+__Plugin__ - [Collaborative Plugin Build](https://github.com/Build-WordPress-Application/wp-app-plugin)
+__Theme__ - [Collaborative Theme Build](https://github.com/Build-WordPress-Application/wp-app-theme)
+  
+  
 Current Ideas
 --------------
 * __Curated user submitted article directory__ - for intermediate / advanced WP and OOP programming
