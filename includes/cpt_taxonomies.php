@@ -36,7 +36,7 @@ class WPAPP_CPT_TAX {
 			'has_archive'        => true,
 			'hierarchical'       => true,
 			'menu_position'      => null,
-			'supports'           => array( 'title', 'comments' )
+			'supports'           => array( 'title', 'comments', 'custom-fields' )
 		);
 	
 		register_post_type( 'style-guides', $args );
