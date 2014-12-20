@@ -14,16 +14,29 @@
  define( 'WP_APP_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
  
  require_once( 'includes/cpt_taxonomies.php' );
+  require_once( 'includes/sg-api-routes.php' );
+ 
  
  class WPAPP_MAIN {
 	 
 	 function __construct() {
 		 new WPAPP_CPT_TAX();
-		 
+		 new sg_routes();		 
 	 }
 	 
  }
  
  new WPAPP_MAIN();
+ 
+ function ensure_loaded_first( array $plugins ) {
+    $key = array_search( plugin_basename( __FILE__ ), $plugins);
+    if (false !== $key) {
+        array_splice($plugins, $key, 1);
+        array_push($plugins, plugin_basename( __FILE__ ));
+    }
+    return $plugins;
+}
+
+add_filter('pre_update_option_active_plugins', 'ensure_loaded_first');
  
  ?>
