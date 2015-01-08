@@ -18,7 +18,11 @@ class sg_routes {
 		);
 
 		// Add more custom routes here
-
+		
+		$routes['/save_sg/(?P<id>\d+)'] = array(
+			array( array( $this, 'save_style_guide'), WP_JSON_Server::EDITABLE | WP_JSON_Server::ACCEPT_JSON )
+		);
+		
 		return $routes;
 	}
 
@@ -240,6 +244,15 @@ class sg_routes {
 		);
 
 		return apply_filters( 'json_prepare_user', $user_fields, $user, $context );
+	}
+	
+	function save_style_guide( $data ) {
+		
+		$return['data'] = $data;
+		
+		$response = new WP_JSON_Response();
+		$response->set_data( $return );
+		return $response;	
 	}
 
 }

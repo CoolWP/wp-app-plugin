@@ -14,14 +14,16 @@
  define( 'WP_APP_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
  
  require_once( 'includes/cpt_taxonomies.php' );
-  require_once( 'includes/sg-api-routes.php' );
+ require_once( 'includes/sg-api-routes.php' );
+ require_once( 'includes/sg-custom-api.php' );
  
  
  class WPAPP_MAIN {
 	 
 	 function __construct() {
 		 new WPAPP_CPT_TAX();
-		 new sg_routes();		 
+		 new sg_routes();
+		 new sg_custom_api();		 
 	 }
 	 
  }
